@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "horen-opd"
+version = "0.2.0"
+description = "HoReN and on-policy distillation with ZsRE, UnKEBench and MQuAKE evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.7,<2.8", "transformers==4.57.1", "numpy>=1.24", "safetensors>=0.4", "accelerate>=1.0"]
+
+[project.optional-dependencies]
+data = ["huggingface-hub>=0.30,<1", "pyarrow>=15", "requests>=2.31"]
+evaluation = ["rouge==1.0.1", "sentence-transformers==3.2.1"]
+test = ["pytest>=8", "rouge==1.0.1"]
+
+[project.scripts]
+horen-run = "horen_opd.run:main"
+horen-score = "horen_opd.score:main"
+
+[tool.setuptools.packages.find]
+include = ["horen_opd*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110
