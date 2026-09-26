@@ -1,0 +1,12 @@
+{
+  "dataset": "unke",
+  "data_path": "data/UnKE/final_data_v3.json",
+  "reasoning_path": "data/reasoning_unke.json",
+  "similarity_model_path": "models/all-MiniLM-L6-v2",
+  "n": 500,
+  "model_path": "models/qwen2.5-7b-instruct",
+  "method": "baseline",
+  "seed": 42,
+  "device": "cuda:0",
+  "output_dir": "runs"
+}
