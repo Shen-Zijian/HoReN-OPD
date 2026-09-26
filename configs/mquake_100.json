@@ -1,0 +1,12 @@
+{
+  "dataset": "mquake",
+  "data_path": "data/mquake/plan_100.json",
+  "reasoning_path": "data/mquake/reasoning_train.json",
+  "n": 100,
+  "checkpoint_every": 50,
+  "model_path": "models/qwen2.5-7b-instruct",
+  "method": "baseline",
+  "seed": 42,
+  "device": "cuda:0",
+  "output_dir": "runs"
+}
